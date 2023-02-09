@@ -3,6 +3,7 @@
 #include "Runtime/Function/Global/RuntimeGlobalContext.h"
 
 #include "Runtime/Function/Render/WindowSystem.h"
+#include "Runtime/Function/Render/RenderSystem.h"
 
 namespace BE
 {
@@ -49,7 +50,8 @@ namespace BE
 	}
 	bool Engine::RendererTick()
 	{
-		return false;
+		g_RuntimeGlobalContext.m_RenderSystem->Tick();
+		return true;
 	}
 	void Engine::CalculateFPS(float delta_time)
 	{

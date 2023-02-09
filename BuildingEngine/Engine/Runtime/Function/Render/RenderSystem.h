@@ -3,6 +3,11 @@
 namespace BE
 {
 	class WindowSystem;
+	class Rhi;
+	class RenderResourceBase;
+	class RenderPipelineBase;
+	class WindowUI;
+
 
 	struct RenderSystemInitInfo
 	{
@@ -17,6 +22,14 @@ namespace BE
 
 
 		void Initialize(RenderSystemInitInfo init_info);
+		void Tick();
+
+		void InitializeUIRenderBackend(WindowUI* windowUI);
+	private:
+		std::shared_ptr<Rhi>                m_Rhi;
+		std::shared_ptr<RenderPipelineBase> m_RenderPipeline;
+		std::shared_ptr<RenderResourceBase> m_RenderResource;
+
 	};
 
 }

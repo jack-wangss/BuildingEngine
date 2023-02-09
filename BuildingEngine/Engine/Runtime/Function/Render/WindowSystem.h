@@ -20,6 +20,9 @@ namespace BE
         void               PollEvents() const;
         bool               ShouldClose() const;
         void               SetTitle(const char* title);
+        GLFWwindow*        GetWindow() const;
+        std::array<int, 2> GetWindowSize() const;
+
 
         typedef std::function<void()>                   OnResetFunc;
         typedef std::function<void(int, int, int, int)> OnKeyFunc;

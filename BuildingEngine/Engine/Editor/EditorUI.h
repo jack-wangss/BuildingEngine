@@ -17,6 +17,20 @@ namespace BE
 
 	private:
 		void ShowEditorUI();
+		void ShowEditorMenu(bool* isShow);
+		void ShowEditorWorldObjectsWindow(bool* isShow);
+		void ShowEditorGameWindow(bool* isShow);
+		void ShowEditorFileContentWindow(bool* isShow);
+		void ShowEditorDetailWindow(bool* isShow);
+
+	private:
+		bool m_EditorMenuWindowOpen = true;
+		bool m_AssetWindowOpen = true;
+		bool m_GameEngineWindowOpen = true;
+		bool m_FileContentWindowOpen = true;
+		bool m_DetailWindowOpen = true;
+		bool m_SceneLightsWindowOpen = true;
+		bool m_SceneLightsDataWindowOpen = true;
 	};
 
 }
